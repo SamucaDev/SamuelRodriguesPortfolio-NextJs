@@ -17,9 +17,9 @@ export default function SectionProject(props) {
           <S.ParagraphDate>{informationProject.date}</S.ParagraphDate>
         </S.Title>
 
-        {informationProject.information.map((info) => {
+        {informationProject.information.map((info, index) => {
           return (
-            <S.Information>
+            <S.Information key={index}>
               <strong>{info.title}:</strong> {info.value}
             </S.Information>
           );

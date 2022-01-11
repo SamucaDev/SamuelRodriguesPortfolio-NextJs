@@ -10,15 +10,14 @@ export default function Projects(props) {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
-  console.log(props);
   const images: Array<ImageInterface> = props.images;
 
   return (
     <div>
       <Slider {...settings}>
-        {images.map((img) => {
+        {images.map((img, index) => {
           return (
-            <div>
+            <div key={index}>
               <img src={img.path}></img>
             </div>
           );

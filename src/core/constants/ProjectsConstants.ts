@@ -1,10 +1,6 @@
-import 'tailwindcss/tailwind.css';
-import { ProjectInterface } from '../../core/interface/ProjectInterface';
-// import { informationProjects } from '../../core/constants/ProjectsConstants.ts';
-import SectionProject from './main/wrapper-project/section-project';
+import { ProjectInterface } from '../interface/ProjectInterface';
 
-
- const informationProjects: Array<ProjectInterface> = [
+export const informationProjects: Array<ProjectInterface> = [
   {
     name: 'MenuBoard',
     date: 'Fev/20 - Mar/21',
@@ -121,17 +117,3 @@ import SectionProject from './main/wrapper-project/section-project';
     ],
   },
 ];
-
-
-export default function Projects() {
-  return (
-    <div className="w-4/6  p-8 mx-auto my-0 mt-12 ">
-      <h1 className="text-gray-50 text-5xl text-center mb-12">Projetos</h1>
-      <div>
-        {informationProjects.map((project, index) => {
-          return <SectionProject key={index} informationProject={project} />;
-        })}
-      </div>
-    </div>
-  );
-}

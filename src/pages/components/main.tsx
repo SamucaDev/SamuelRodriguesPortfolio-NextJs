@@ -1,6 +1,7 @@
 import Header from './header';
 import AboutMe from './aboutMe';
 import Projects from './projects';
+import Footer from './main/footer/footer'
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -14,6 +15,9 @@ export default function Home() {
       <AboutMe />
       <div className="bg-custom-blue w-full">
         <Projects />
+      </div>
+      <div>
+        <Footer/>
       </div>
     </div>
   );
